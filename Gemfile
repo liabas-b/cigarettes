@@ -6,7 +6,7 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'jquery-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'therubyracer',  platforms: :ruby
-gem 'mongoid'
+gem 'mongoid', git: 'git@github.com:mongodb/mongoid.git', branch: 'master'
 gem 'haml'
 gem 'figaro'
 gem 'bootstrap-sass', '~> 3.3.5'
