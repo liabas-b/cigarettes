@@ -1,9 +1,0 @@
-$('.errored').removeClass('errored');
-<% if @status[:success] %>
-  $('#operations').html('<%= escape_javascript(render :partial => "operations/table") %>')
-  refreshOperationsTable();
-<% else %>
-  <% @status[:errors].each do |errored_field| %>
-    $("#operation_<%= errored_field %>").addClass('errored');
-  <% end %>
-<% end %>
