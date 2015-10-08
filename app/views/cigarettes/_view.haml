@@ -1,11 +1,11 @@
 %table
   - @cigarettes_by_day.each do |day_cigarettes|
     %tr
-      %td.td
+      %td.td.align-right{ width: '50%' }
         %h4
           %span
             = day_cigarettes[:date].to_s
             = "(#{day_cigarettes[:cigarettes].count})"
-      %td.td
+      %td.td{ width: '50%' }
         - day_cigarettes[:cigarettes].each do |cigarette|
           %span.cigarette= "I"

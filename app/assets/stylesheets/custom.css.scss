@@ -12,17 +12,30 @@ body, *:not(.glyphicon) {
   bottom: 0;
   top: 0;
   text-align: center;
+  overflow: hidden;
 }
 .app-container {
-  margin: 2em auto;
   padding: 2em;
-  width: 400px;
-  border: 1px rgba(0,0,0,0.4);
-  background: rgba(0,0,0,0.2);
+  position: absolute;
+  top: 2em;
+  bottom: 2em;
+  left: 2em;
+  right: 2em;
+  border: 1px rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.2);
   color: white;
   h1 {
     margin-top: 0;
   }
+}
+#cigarettes {
+  position: absolute;
+  bottom: 2em;
+  top: 10em;
+  right: 2em;
+  left: -9em;
+  overflow-y: auto;
+  right: -9em;
 }
 .btn-transparent {
   border: none !important;
@@ -35,7 +48,14 @@ body, *:not(.glyphicon) {
   color: white !important;
   font-weight: bold;
 }
+table {
+  width: 100%;
+}
 .td {
-  text-align: left !important;
-  width: 200px !important;
+  text-align: left;
+  width: 50%;
+  padding: 0 1em;
+}
+.align-right {
+  text-align: right;
 }
