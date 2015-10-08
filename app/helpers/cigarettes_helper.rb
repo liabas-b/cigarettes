@@ -6,8 +6,6 @@ module CigarettesHelper
     @first_cigarette = Cigarette.order(date: :asc).first
     tmp_date = Date.today
     begin_date = @first_cigarette.present? ? @first_cigarette.date.to_date : nil
-    puts tmp_date.inspect
-    puts begin_date.inspect
     if begin_date
       (tmp_date..begin_date).each do |day|
         puts day.to_date.inspect
@@ -17,7 +15,5 @@ module CigarettesHelper
         }
       end
     end
-    30.times{ @cigarettes_by_day << @cigarettes_by_day[0] }
-    puts @cigarettes_by_day.inspect
   end
 end
