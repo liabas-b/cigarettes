@@ -19,7 +19,7 @@ test:
 production:
   sessions:
     default:
-      uri: mongodb://ladeno:douze@ds035004.mongolab.com:35004/heroku_98brsjlv
+      uri: mongodb://ladeno:douze@ds035004.mongolab.com:35004
       options:
         max_retries: 30
         retry_interval: 1
