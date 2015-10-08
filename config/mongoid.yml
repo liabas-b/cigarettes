@@ -19,7 +19,9 @@ test:
 production:
   sessions:
     default:
-      uri: mongodb://heroku_98brsjlv:g4669t8ed157atckbh4binbjm5@ds035004.mongolab.com:35004/heroku_98brsjlv
+      uri: ds035004.mongolab.com:35004/heroku_98brsjlv
+      username: ladeno
+      password: douze
       options:
         max_retries: 30
         retry_interval: 1
