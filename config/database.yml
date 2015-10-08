@@ -1,0 +1,10 @@
+development:
+  adapter: postgresql
+  pool: 5
+  password:
+  timeout: 5000
+  encoding: unicode
+  database: cigarettes_development
+  host: localhost
+  username: ladeno
+  password: douze

@@ -1,9 +1,4 @@
-class Cigarette
-  include Mongoid::Document
-  include Mongoid::Timestamps
-
-  field :date, type: DateTime
-
+class Cigarette < ActiveRecord::Base
   before_save :set_date
 
   def set_date

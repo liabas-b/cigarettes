@@ -1,4 +1,11 @@
-- @cigarettes_by_day.each do |day_cigarettes|
-  %h4= day_cigarettes[:date].to_s
-  - day_cigarettes[:cigarettes].each do |cigarette|
-    %span.cigarette= "I"
+%table
+  - @cigarettes_by_day.each do |day_cigarettes|
+    %tr
+      %td.td
+        %h4
+          %span
+            = day_cigarettes[:date].to_s
+            = "(#{day_cigarettes[:cigarettes].count})"
+      %td.td
+        - day_cigarettes[:cigarettes].each do |cigarette|
+          %span.cigarette= "I"

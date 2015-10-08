@@ -5,7 +5,7 @@ module CigarettesHelper
     @cigarettes_by_day = []
     @first_cigarette = Cigarette.order(date: :asc).first
     tmp_date = Date.tomorrow
-    begin_date = @first_cigarette.present? ? @first_cigarette.date : Date.parse('2015-09-08')
+    begin_date = @first_cigarette.present? ? @first_cigarette.date.to_date : Date.parse('2015-09-08')
     puts tmp_date.inspect
     puts begin_date.inspect
     (begin_date..tmp_date).each do |day|

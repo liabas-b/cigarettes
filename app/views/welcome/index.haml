@@ -1,8 +1,8 @@
-%h1 Cigarettes
-
-= form_for(@new_cigarette, remote: true, method: :post) do |f|
-  = f.hidden_field :date, value: DateTime.now
-  %button.btn.btn-danger.rounded{ type: 'submit' }
-    %i.glyphicon.glyphicon-plus
-#cigarettes
-  = render 'cigarettes/view'
+.app-container
+  %h1 CIGARETTES
+  = form_for(@new_cigarette, remote: true, method: :post) do |f|
+    = f.hidden_field :date, value: DateTime.now
+    %button.btn.btn-transparent.btn-add{ type: 'submit' }
+      +
+  #cigarettes
+    = render 'cigarettes/view'
