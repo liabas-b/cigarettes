@@ -1,6 +1,7 @@
 class WelcomeController < ApplicationController
+  include CigarettesHelper
 
   def index
-    @accounts = Account.all
+    init_index
   end
 end

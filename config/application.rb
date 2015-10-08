@@ -9,7 +9,7 @@ require "rails/test_unit/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Mybudget
+module Cigarettes
   class Application < Rails::Application
 
     # Settings in config/environments/* take precedence over those specified here.
@@ -23,5 +23,6 @@ module Mybudget
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :en
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
   end
 end

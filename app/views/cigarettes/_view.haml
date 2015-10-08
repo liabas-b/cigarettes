@@ -1,0 +1,4 @@
+- @cigarettes_by_day.each do |day_cigarettes|
+  %h4= day_cigarettes[:date].to_s
+  - day_cigarettes[:cigarettes].each do |cigarette|
+    %span.cigarette= "I"
