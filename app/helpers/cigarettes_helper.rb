@@ -7,7 +7,7 @@ module CigarettesHelper
     tmp_date = Date.today
     begin_date = @first_cigarette.present? ? @first_cigarette.date.to_date : nil
     if begin_date
-      (tmp_date..begin_date).each do |day|
+      (begin_date..tmp_date).each do |day|
         puts day.to_date.inspect
         @cigarettes_by_day << {
           date: day.to_date,
@@ -15,5 +15,6 @@ module CigarettesHelper
         }
       end
     end
+    @cigarettes_by_day.reverse!
   end
 end
