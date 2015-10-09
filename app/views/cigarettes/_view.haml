@@ -1,12 +1,6 @@
-%table
-  - puts @cigarettes_by_day.inspect
-  - @cigarettes_by_day.each do |day_cigarettes|
-    %tr
-      %td.td.align-right{ width: '50%' }
-        %h4
-          %span
-            = day_cigarettes[:date].to_s
-            = "(#{day_cigarettes[:cigarettes].count})"
-      %td.td{ width: '50%' }
-        - day_cigarettes[:cigarettes].each do |cigarette|
-          %span.cigarette= "I"
+- @cigarettes_by_day.each_with_index do |day_cigarettes, index|
+  .day-cigarettes
+    - if index == 0
+      %span.today >
+    - day_cigarettes[:cigarettes].each do |cigarette|
+      %span.cigarette= "I"
