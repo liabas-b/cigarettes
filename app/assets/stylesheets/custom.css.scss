@@ -44,9 +44,16 @@ body, *:not(.glyphicon) {
 .btn-add {
   font-size: 24px !important;
 }
-.btn-add:hover {
+.btn-add:hover, .btn-add:focus {
   color: white !important;
   font-weight: bold;
+  outline: none !important;
+}
+.btn-add.loading {
+  font-weight: bold;
+}
+.btn:active, .btn.active {
+  box-shadow: none !important;
 }
 table {
   width: 100%;
@@ -69,4 +76,79 @@ table {
 .today {
   margin-left: -15PX;
   margin-right: 3.4px;
+}
+
+
+@-webkit-keyframes rotating {
+  from{
+    -webkit-transform: rotate(360deg);
+  }
+  to{
+    -webkit-transform: rotate(0deg);
+  }
+}
+@-moz-keyframes rotating {
+  from{
+    -moz-transform: rotate(360deg);
+  }
+  to{
+    -moz-transform: rotate(0deg);
+  }
+}
+@-ms-keyframes rotating {
+  from{
+    -ms-transform: rotate(360deg);
+  }
+  to{
+    -ms-transform: rotate(0deg);
+  }
+}
+@keyframes rotating {
+  from{
+    transform: rotate(360deg);
+  }
+  to{
+    transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes rotating-inverse {
+  from{
+    -webkit-transform: rotate(0deg);
+  }
+  to{
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes rotating-inverse {
+  from{
+    -moz-transform: rotate(0deg);
+  }
+  to{
+    -moz-transform: rotate(360deg);
+  }
+}
+@-ms-keyframes rotating-inverse {
+  from{
+    -ms-transform: rotate(0deg);
+  }
+  to{
+    -ms-transform: rotate(360deg);
+  }
+}
+@keyframes rotating-inverse {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  display: block;
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
 }

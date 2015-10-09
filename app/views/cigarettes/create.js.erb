@@ -1,1 +1,4 @@
 $('#cigarettes').html('<%= escape_javascript(render :partial => "cigarettes/view") %>')
+setTimeout(function() {
+  $('.btn-add').removeClass('loading');
+}, 500)
